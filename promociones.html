@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Promociones | Casa Magnolia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="img/logo.jpg" alt="Logo Casa Magnolia" class="brand__logo">
+        <span class="brand__name">Casa Magnolia</span>
+      </a>
+
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="productos.html">Productos</a>
+        <a href="promociones.html">Promociones</a> <a href="ubicacion.html">Ubicación</a> 
+        <a href="contacto.html" class="btn btn--accent">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="promociones" class="section">
+    <div class="container">
+      <h2>Promociones Vigentes</h2>
+      <p>Aprovecha estas ofertas especiales al calcular tu compra.</p>
+
+      <div class="promotions-grid">
+        
+        <article class="promotion-card">
+          <img src="img/desc.jpg" alt="10% de descuento en tu primera compra">
+          <div class="promotion-card__body">
+            <h4>10% de Descuento (Clientes Nuevos)</h4>
+            <p>Ideal para tu primer pedido. ¡Elige esta promoción en la calculadora de abajo!</p>
+          </div>
+        </article>
+
+        <article class="promotion-card">
+          <img src="img/off.jpg" alt="15% off en compras mayores a 50.000">
+          <div class="promotion-card__body">
+            <h4>15% OFF (Compras > $50.000)</h4>
+            <p>Se aplica automáticamente si tu total supera los 50.000. Perfecto para regalos grandes.</p>
+          </div>
+        </article>
+
+        <article class="promotion-card">
+          <img src="img/mama.jpg" alt="2x1 Ramos de flores especial día de la madre">
+          <div class="promotion-card__body">
+            <h4>2x1 en Ramos de Flores</h4>
+            <p>El precio del ramo es $30.000. Llevas dos, pagas $30.000. ¡Elige esta promo!</p>
+          </div>
+        </article>
+
+      </div>
+      
+      
+      <section id="promo-calculator" class="promo-form">
+        <h3>Calcula tu Ahorro y Total Final</h3>
+        <p style="margin-bottom: 25px; color: var(--violet-700);">Ingresa la información de tu compra y selecciona la promoción que deseas aplicar.</p>
+
+        <form id="calculatorForm">
+            <label for="promoSelect">Selecciona la Promoción a Aplicar:</label>
+            <select id="promoSelect">
+                <option value="none">Sin Promoción</option>
+                <option value="newCustomer">10% OFF en primera compra (desc.jpg)</option>
+                <option value="bulkDiscount">15% OFF en compras mayores a $50.000 (off.jpg)</option>
+                <option value="2x1Ramos">2x1 en Ramos de Flores (mama.jpg)</option>
+            </select>
+
+            <label for="ramosQty">Cantidad de Ramos ($30.000 c/u):</label>
+            <input type="number" id="ramosQty" value="0" min="0">
+
+            <label for="macetasQty">Cantidad de Macetas con flores ($20.000 c/u):</label>
+            <input type="number" id="macetasQty" value="0" min="0">
+            
+            <label for="velasQty">Cantidad de Velas Aromáticas ($22.000 c/u):</label>
+            <input type="number" id="velasQty" value="0" min="0">
+            
+            <button type="button" onclick="calculateTotal()" class="btn btn--accent">Calcular Compra</button>
+        </form>
+
+        <div id="results" style="display: none;">
+            <h4>Resumen de Compra</h4>
+            <table>
+                <tr>
+                    <th>Concepto</th>
+                    <th>Monto</th>
+                </tr>
+                <tr>
+                    <td>Total sin Descuento (Subtotal)</td>
+                    <td id="subtotalValue"></td>
+                </tr>
+                <tr class="saving-row">
+                    <td>Descuento Aplicado (Ahorro)</td>
+                    <td id="discountValue"></td>
+                </tr>
+                <tr>
+                    <th>TOTAL FINAL a Pagar</th>
+                    <th id="finalTotalValue"></th>
+                </tr>
+            </table>
+            <p id="savingMessage" style="margin-top: 15px; color: var(--red-700); font-weight: 700;">En esta compra estás ahorrando un total de $...</p>
+        </div>
+      </section>
+      
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Casa Magnolia — Hecho con amor y flores.</p>
+      <a class="top" href="#promociones">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="promociones.js"></script>
+</body>
+</html>
