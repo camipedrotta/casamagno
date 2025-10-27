@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto | Casa Magnolia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="img/logo.jpg" alt="Logo Casa Magnolia" class="brand__logo">
+        <span class="brand__name">Casa Magnolia</span>
+      </a>
+
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="producto.html">Productos</a>
+        <a href="ubicacion.html">Ubicación</a> <a href="contacto.html" class="btn btn--accent">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="contacto" class="section">
+    <div class="container grid-2">
+      <div>
+        <h2>Contacto</h2>
+        <p><strong>Dirección:</strong> Av. Magnolia 1234, Palermo, CABA</p>
+        <p><strong>Horario:</strong> Lun a Sáb 10:00–19:00</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">+54 9 11 0000 0000</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/" target="_blank" rel="noopener">@casa.magnolia</a></p>
+        <p><strong>E-mail:</strong> <a href="mailto:hola@casamagnolia.com">hola@casamagnolia.com</a></p>
+        <a class="btn btn--primary" href="mailto:hola@casamagnolia.com">Escribinos</a>
+      </div>
+
+      <div class="gallery">
+        <img src="img/ramos.jpg" alt="Ramo colorido">
+        <img src="img/velas-aromaticas.jpg" alt="Vela aromática">
+        <img src="img/flores-prensadas.jpg" alt="Cuadros de flores">
+        <img src="img/macetas-con-flores.jpg" alt="Maceta con flores">
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Casa Magnolia — Hecho con amor y flores.</p>
+      <a class="top" href="#contacto">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

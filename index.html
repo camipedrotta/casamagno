@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casa Magnolia | Flores, velas y objetos con alma</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="img/logo.jpg" alt="Logo Casa Magnolia" class="brand__logo">
+        <span class="brand__name">Casa Magnolia</span>
+      </a>
+
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="producto.html">Productos</a>
+        <a href="ubicacion.html">Ubicación</a> <a href="contacto.html" class="btn btn--accent">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero" role="region" aria-label="Portada">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <h1 class="hero__title">Donde las flores cuentan historias.</h1>
+      <p class="hero__subtitle">Aromas, colores y detalles que transforman lo cotidiano en calma.</p>
+      <p class="hero__intro">
+        En Casa Magnolia celebramos la belleza de lo simple. Creamos arreglos florales, velas y objetos con alma, inspirados en los pequeños rituales que llenan la vida de color, perfume y armonía. Cada pieza nace desde el amor por las flores —especialmente el jazmín y la magnolia— para traer un instante de paz a cada rincón.
+      </p>
+      <a href="producto.html" class="btn btn--primary">Ver productos</a>
+    </div>
+  </section>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Casa Magnolia — Hecho con amor y flores.</p>
+      <a class="top" href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

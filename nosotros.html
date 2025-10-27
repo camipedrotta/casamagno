@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nosotros | Casa Magnolia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="img/logo.jpg" alt="Logo Casa Magnolia" class="brand__logo">
+        <span class="brand__name">Casa Magnolia</span>
+      </a>
+
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="producto.html">Productos</a>
+        <a href="ubicacion.html">Ubicación</a> <a href="contacto.html" class="btn btn--accent">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="nosotros" class="section section--alt">
+    <div class="container grid-2">
+      <div>
+        <h2>Nosotros</h2>
+        <p>
+          Soy Camila, tengo 25 años y este proyecto es un reflejo de lo que las flores representan en mi vida, con el fin de llevar aromas, colores y calma a la cotidianidad de las personas.
+        </p>
+        <p>
+          Desde chica, crecí entre flores. Mi mamá tenía el don de llenar los espacios con vida: jazmines en la cocina, magnolias en el jardín, y ese aroma suave que parecía abrazarlo todo. A veces pienso que fue su forma de enseñarme que la belleza no está en lo grande, sino en los pequeños rituales: prender una vela, cambiar el agua del florero, abrir la ventana y dejar que entre el perfume del día.
+        </p>
+        <p>
+          Casa Magnolia nació de ese legado. De las mujeres que encuentran calma en los aromas, en los colores, en los detalles que transforman lo cotidiano. Creamos piezas florales, velas y objetos con alma — cada uno pensado para traer calidez, fragancia y color a los espacios que habitamos.
+        </p>
+        <p>
+          No buscamos perfección, sino armonía. Porque cuando algo huele a jazmín, a magnolia o a hogar, ya todo está bien.
+        </p>
+      </div>
+      <figure class="portrait">
+        <img src="img/yo.jpg" alt="Retrato de Camila, fundadora de Casa Magnolia" />
+      </figure>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Casa Magnolia — Hecho con amor y flores.</p>
+      <a class="top" href="#nosotros">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
